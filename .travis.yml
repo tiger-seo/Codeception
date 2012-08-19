@@ -18,7 +18,5 @@ before_script:
   - wget -nc http://getcomposer.org/composer.phar
   - php composer.phar install
   - "mysql -e 'create database codeception_test;'"
-  - sudo rabbitmqctl add_user guest guest
-  - sudo rabbitmqctl set_permissions -p / guest ".*" ".*" ".*"
 
 script: "php codecept run"
